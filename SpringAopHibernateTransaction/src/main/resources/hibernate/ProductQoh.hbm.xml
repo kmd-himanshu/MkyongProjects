@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 29, 2010 1:16:19 PM by Hibernate Tools 3.2.5.Beta -->
+<hibernate-mapping>
+    <class name="com.mkyong.product.model.ProductQoh" table="product_qoh">
+        <id name="qohId" type="java.lang.Long">
+            <column name="QOH_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="productId" type="long">
+            <column name="PRODUCT_ID" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="QTY" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

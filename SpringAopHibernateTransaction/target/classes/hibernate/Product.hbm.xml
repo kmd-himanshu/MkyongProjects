@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 29, 2010 1:16:19 PM by Hibernate Tools 3.2.5.Beta -->
+<hibernate-mapping>
+    <class name="com.mkyong.product.model.Product" table="product">
+        <id name="productId" type="java.lang.Long">
+            <column name="PRODUCT_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="productCode" type="string">
+            <column name="PRODUCT_CODE" length="20" not-null="true" />
+        </property>
+        <property name="productDesc" type="string">
+            <column name="PRODUCT_DESC" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

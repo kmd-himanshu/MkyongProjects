@@ -1,0 +1,40 @@
+<html>
+<head>
+<style type="text/css">
+  .highlight { 
+  	background:green;
+  }
+ </style>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+</head>
+<body>
+  <h1>jQuery add / remove css class example</h1>
+ 
+  <p id="para1">This is paragraph 1</p>
+  <p id="para2">This is paragraph 2</p>
+  <p>This is paragraph 3</p>
+  <p>This is paragraph 4</p>
+ 
+  <button id="addClass">Add highlight</button>
+  <button id="removeClass">Remove highlight</button>
+ 
+<script type="text/javascript">
+ 
+    $("#addClass").click(function () {
+ 
+	  //$('#para1').addClass('highlight');
+	  
+	  $('#para1').css({background:'green'});
+	  $('#para2').addClass('highlight');
+ 
+    });
+ 
+    $("#removeClass").click(function () {
+ 
+	  $('#para1').removeClass('highlight');
+ 
+    });
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+</HEAD>
+
+<BODY>
+<div class="row">
+    <div class="span2">
+      <a href="#" class="thumbnail"> <!-- the thumbnail class
+    helps put the logo -->
+        <img src="http://placehold.it/160x80" alt=""> <!-- the logo image -->
+      </a>
+    </div>
+    <br><br>
+    <div class="nav-btns"> <!-- the class that helps create nav
+    style buttons -->
+      <ul class="nav nav-pills offset6"> <!-- an offset of 6 to
+    adjust the horizontal alignment -->
+        <li class="active">
+          <a href="#">Home</a> <!-- active means the default
+    chosen tab -->
+        </li>
+        <!-- the other tabs -->
+        <li class="span1"><a href="#">About</a></li>
+        <li class="span1"><a href="#">Services</a></li>
+        <li class="span1"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class='carousel'>
+    <div class="carousel-inner">
+     <div class="active item"> <!--this lists the image that should load first--!>
+         <img src="http://placehold.it/800x240" alt=""> <!-- the image you want to place -->
+         <div class="carousel-caption"> 
+          <h4>First Thumbnail label</h4> <!-- the image caption -->
+          <p>This is the first thumbnail info</p> <!-- the image description -->
+     </div>
+    </div>
+</div>
+
+<!-- more item divs can be repeated over here if you want to add more images -->
+</div>
+<!-- Carousel navigation buttons -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+</BODY>
+</HTML>

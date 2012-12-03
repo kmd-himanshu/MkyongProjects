@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/jstl/1.1.2/jstl-1.1.2.jar" sourcepath="M2_REPO/javax/servlet/jstl/1.1.2/jstl-1.1.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" sourcepath="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/maven/repo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar" sourcepath="M2_REPO/junit/junit/3.8.1/junit-3.8.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring/2.5.6/spring-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring/2.5.6/spring-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/2.5.6/spring-beans-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-beans/2.5.6/spring-beans-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/2.5.6/spring-context-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-context/2.5.6/spring-context-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-context-support/2.5.6/spring-context-support-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-context-support/2.5.6/spring-context-support-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/2.5.6/spring-core-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-core/2.5.6/spring-core-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/2.5.6/spring-web-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-web/2.5.6/spring-web-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-webmvc/2.5.6/spring-webmvc-2.5.6.jar" sourcepath="M2_REPO/org/springframework/spring-webmvc/2.5.6/spring-webmvc-2.5.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/taglibs/standard/1.1.2/standard-1.1.2.jar" sourcepath="M2_REPO/taglibs/standard/1.1.2/standard-1.1.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

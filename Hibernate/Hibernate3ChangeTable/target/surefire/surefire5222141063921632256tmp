@@ -1,0 +1,37 @@
+#surefire
+#Fri Apr 06 14:38:05 IST 2012
+testClassesDirectory=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\target\\test-classes
+classPathUrl.4=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\cglib\\cglib\\2.1_2\\cglib-2.1_2.jar
+classPathUrl.3=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\asm\\asm\\1.5.3\\asm-1.5.3.jar
+classPathUrl.2=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\hibernate\\hibernate\\3.1rc2\\hibernate-3.1rc2.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\target\\classes
+reportsDirectory=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\target\\surefire-reports
+classPathUrl.0=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=D\:\\mykyong project\\Hibernate\\Hibernate3ChangeTable\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+classPathUrl.12=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\hibernate\\javax\\persistence\\hibernate-jpa-2.0-api\\1.0.1.Final\\hibernate-jpa-2.0-api-1.0.1.Final.jar
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.11=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\hibernate\\hibernate-annotations\\3.1beta6\\hibernate-annotations-3.1beta6-sources.jar
+classPathUrl.10=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\javax\\transaction\\jta\\1.0.1B\\jta-1.0.1B.jar
+classPathUrl.9=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\hibernate\\antlr\\2.7.5H3\\antlr-2.7.5H3.jar
+classPathUrl.8=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\ehcache\\ehcache\\1.1\\ehcache-1.1.jar
+classPathUrl.7=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\dom4j\\dom4j\\1.6.1\\dom4j-1.6.1.jar
+childDelegation=false
+classPathUrl.6=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\commons-logging\\commons-logging\\1.0.4\\commons-logging-1.0.4.jar
+classPathUrl.5=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\commons-collections\\commons-collections\\2.1.1\\commons-collections-2.1.1.jar

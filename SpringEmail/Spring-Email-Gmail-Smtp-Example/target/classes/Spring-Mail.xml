@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="himanshusyntel@gmail.com" />
+		<property name="password" value="rj14cf7887" />
+		
+		<property name="javaMailProperties">
+			<props>
+            	<prop key="mail.smtp.auth">true</prop>
+            	<prop key="mail.smtp.starttls.enable">true</prop>
+        	</props>
+		</property>
+		
+	</bean>
+	
+	<bean id="mailMail" class="com.mkyong.common.MailMail">
+		<property name="mailSender" ref="mailSender" />
+		<property name="simpleMailMessage" ref="customeMailMessage" />
+	</bean>
+	
+	<bean id="customeMailMessage"
+		class="org.springframework.mail.SimpleMailMessage">
+
+		<property name="from" value="Abhishek-yui@gmail.com" />
+		<property name="to" value="Agrawal.Himanshu83@gmail.com" />
+		<property name="subject" value="Testing Subject" />
+		<property name="text">
+		<value>
+			<![CDATA[
+				server name:   rsi-nod-exmdb1.india.rsystems.com
+
+Agrawal.Himanshu@rsystems.com
+			]]>
+		</value>
+	</property>
+	</bean>
+
+
+</beans>

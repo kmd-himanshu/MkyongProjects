@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Hibernate3ChangeTable</groupId>
+  <artifactId>Hibernate3ChangeTable</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <version>3.1rc2</version>
+    </dependency>
+    <dependency>
+    	<groupId>hibernate</groupId>
+    	<artifactId>hibernate-annotations</artifactId>
+    	<version>3.1beta6</version>
+    	<type>jar</type>
+    	<classifier>sources</classifier>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate.javax.persistence</groupId>
+    	<artifactId>hibernate-jpa-2.0-api</artifactId>
+    	<version>1.0.1.Final</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

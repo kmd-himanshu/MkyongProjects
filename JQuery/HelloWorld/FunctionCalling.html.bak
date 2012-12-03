@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>jQuery Hello World</title>
+</head>
+<script type="text/javascript" src="../jquery-1.7.1.js"></script>
+<body>
+ 
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+ $("#msgid1").html("This is Hello World by JQuery 1<BR>");
+});
+ 
+$(function(){
+ $("#msgid2").html("This is Hello World by JQuery 2<BR>");
+});
+ 
+window.onload = function(){
+ document.getElementById('msgid3').innerHTML = "This is Hello World by JavaScript";
+}
+ 
+</script>
+ 
+This is Hello World by HTML
+ 
+<!--<div id="msgid1">
+</div>-->
+ 
+<div id="msgid2">
+</div>
+ 
+<div id="msgid3">
+</div>
+ 
+</body>
+</html>

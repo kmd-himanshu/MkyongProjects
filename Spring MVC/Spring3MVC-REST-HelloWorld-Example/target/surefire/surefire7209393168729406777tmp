@@ -1,0 +1,37 @@
+#surefire
+#Tue Mar 20 15:09:40 IST 2012
+testClassesDirectory=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\target\\test-classes
+classPathUrl.4=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\commons-logging\\commons-logging\\1.1.1\\commons-logging-1.1.1.jar
+classPathUrl.3=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-asm\\3.0.5.RELEASE\\spring-asm-3.0.5.RELEASE.jar
+classPathUrl.2=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-core\\3.0.5.RELEASE\\spring-core-3.0.5.RELEASE.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\target\\classes
+reportsDirectory=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\target\\surefire-reports
+classPathUrl.0=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=D\:\\mykyong project\\Spring MVC\\Spring3MVC-REST-HelloWorld-Example\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+classPathUrl.12=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-expression\\3.0.5.RELEASE\\spring-expression-3.0.5.RELEASE.jar
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.11=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-context-support\\3.0.5.RELEASE\\spring-context-support-3.0.5.RELEASE.jar
+classPathUrl.10=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-webmvc\\3.0.5.RELEASE\\spring-webmvc-3.0.5.RELEASE.jar
+classPathUrl.9=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-aop\\3.0.5.RELEASE\\spring-aop-3.0.5.RELEASE.jar
+classPathUrl.8=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-context\\3.0.5.RELEASE\\spring-context-3.0.5.RELEASE.jar
+classPathUrl.7=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-beans\\3.0.5.RELEASE\\spring-beans-3.0.5.RELEASE.jar
+childDelegation=false
+classPathUrl.6=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\aopalliance\\aopalliance\\1.0\\aopalliance-1.0.jar
+classPathUrl.5=C\:\\Users\\Agrawal.Himanshu\\.m2\\repository\\org\\springframework\\spring-web\\3.0.5.RELEASE\\spring-web-3.0.5.RELEASE.jar

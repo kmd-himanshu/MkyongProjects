@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+ 
+<struts-config>
+ 
+	<form-beans>
+		<form-bean name="customerForm"   
+		      type="com.mkyong.customer.form.CustomerForm" />
+		
+		<form-bean name="dynaCustomerListForm"   
+		      type="org.apache.struts.action.DynaActionForm">
+		      <form-property name="customerList" type="java.util.List"/>
+		</form-bean>
+		
+	</form-beans>
+	
+	<action-mappings>
+
+	 	<action
+			path="/AddCustomerPage"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/pages/customer/add_customer.jsp"/>
+
+
+		<action
+			path="/AddCustomer"
+			type="com.mkyong.customer.action.AddCustomerAction"
+			name="customerForm"
+			validate="true"
+			input="/pages/customer/add_customer.jsp"
+			>	
+ 
+			<forward name="success" redirect="true" path="/ListCustomer.do"/>
+		</action>
+		
+		<action
+			path="/ListCustomer"
+			type="com.mkyong.customer.action.ListCustomerAction"
+			name="dynaCustomerListForm"
+			>	
+ 
+			<forward name="success" path="/pages/customer/list_customer.jsp"/>
+		</action>
+		
+		
+	</action-mappings>
+ 
+	<message-resources
+		parameter="com.mkyong.customer.properties.Customer" />
+ 
+ 	<!-- Spring Struts plugin -->
+ 	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+		value="/WEB-INF/classes/SpringBeans.xml" />
+  	</plug-in>
+ 
+</struts-config>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<script type="text/javascript" src="http://healthsukh.com/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(function(){
+var i=0;
+$($('.slideShow')[0]).fadeIn(1000).attr('class','curr');
+setInterval(function(){
+i++;
+if(i<4) {
+$('.curr').hide().attr('class','slideShow').next().fadeIn(1000).attr('class','curr');
+} else {
+i = 0;
+$('.curr').hide();
+$($('.slideShow')[0]).fadeIn(1000).attr('class','curr');
+}
+},
+3000);
+});
+});
+
+</script>
+</HEAD>
+
+<BODY>
+<div>
+<div class="slideShow" style="display:none;"><img src="http://healthsukh.com/sites/default/files/banner/home2.jpg" width="620px" height="300px"/></div>
+<div class="slideShow" style="display:none;"><img src="http://healthsukh.com/sites/default/files/banner/home3.jpg" width="620px" height="300px"/></div>
+<div class="slideShow" style="display:none;"><img src="http://healthsukh.com/sites/default/files/banner/home4.jpg" width="620px" height="300px"/></div>
+<div class="slideShow" style="display:none;"><img src="http://healthsukh.com/sites/default/files/banner/home1.JPG" width="620px" height="300px"/></div>
+</div>
+</BODY>
+
+</HTML>

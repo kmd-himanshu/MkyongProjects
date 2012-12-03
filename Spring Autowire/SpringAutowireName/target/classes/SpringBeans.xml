@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customer" class="com.mkyong.common.Customer" autowire="byName" />
+		
+	<bean id="address1" class="com.mkyong.common.Address" >
+		<property name="fulladdress" value="Block A 888, CA" />
+	</bean>
+
+</beans>

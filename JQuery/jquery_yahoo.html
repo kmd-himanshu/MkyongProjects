@@ -1,0 +1,42 @@
+<html>
+<head>
+ 
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<style type="text/css">
+	#content{
+		border:1px solid blue;
+		margin:16px;
+		padding:16px;
+	}
+</style>
+ 
+</head>
+<body>
+  <div id="msg"></div>
+ 
+  <div id="content">
+  </div>
+ 
+  <br/>
+  <button id="load">Load yahoo.com</button>
+ 
+<script type="text/javascript">
+ 
+/*$('#load').click(function(){
+	$('#msg').text("Loading......");
+	$('#content').load("http://www.yahoo.com", function() {
+ 		$('#msg').text("");
+	});
+});*/
+
+$('#load').click(function(){
+	$('#msg').text("Loading......");
+	$('#content').load("pro.php?url=http://www.yahoo.com", function() {
+ 		$('#msg').text("");
+	});
+});
+ 
+</script>
+ 
+</body>
+</html>
