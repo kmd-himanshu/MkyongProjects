@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> cool Image Cropping Example </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+
+<script src="file:///D:/KMD/Jcrop/tapmodo-Jcrop-25f2e18/js/jquery.min.js"></script>
+<script src="file:///D:/KMD/Jcrop/tapmodo-Jcrop-25f2e18/js/jquery.Jcrop.js"></script>
+<link rel="stylesheet" href="file:///D:/KMD/Jcrop/tapmodo-Jcrop-25f2e18/css/jquery.Jcrop.css" type="text/css" />
+<!-- <link rel="stylesheet" href="file:///D:/KMD/Jcrop/tapmodo-Jcrop-25f2e18/demos/demo_files/demos.css" type="text/css" /> -->
+
+</HEAD>
+
+<BODY>
+	<!--<img id="cropbox" src="file:///C:/Users/Agrawal.Himanshu/Desktop/kids/kids2.jpeg">Kid </img> -->
+	<img id="cropbox" src="file:///C:/Users/Agrawal.Himanshu/Desktop/kids/Koala.jpg">Koala </img> 
+
+		<!-- This is the form that our event handler fills -->
+		<form onsubmit="return false;" class="coords">
+			<label>X1 <input type="text" size="4" id="x1" name="x1" /></label>
+			<label>Y1 <input type="text" size="4" id="y1" name="y1" /></label>
+			<label>X2 <input type="text" size="4" id="x2" name="x2" /></label>
+			<label>Y2 <input type="text" size="4" id="y2" name="y2" /></label>
+			<label>W <input type="text" size="4" id="w" name="w" /></label>
+			<label>H <input type="text" size="4" id="h" name="h" /></label>
+		</form>
+	<BR>
+	<input id="crop-btn" type="button" value="Crop"/>
+</BODY>
+
+<script>
+
+	jQuery('#crop-btn').click(function() {
+		alert('crop called');
+		jQuery('#cropbox').Jcrop({
+					onChange: showCoords,
+					onSelect: showCoords
+				});
+	});
+
+	// Simple event handler, called from onChange and onSelect
+			// event handlers, as per the Jcrop invocation above
+			function showCoords(c)
+			{
+				jQuery('#x1').val(c.x);
+				jQuery('#y1').val(c.y);
+				jQuery('#x2').val(c.x2);
+				jQuery('#y2').val(c.y2);
+				jQuery('#w').val(c.w);
+				jQuery('#h').val(c.h);
+			};
+
+</script>
+</HTML>
