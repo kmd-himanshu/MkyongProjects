@@ -1,0 +1,5 @@
+<xwss:SecurityConfiguration
+xmlns:xwss="http://java.sun.com/xml/ns/xwss/config">
+<xwss:RequireUsernameToken passwordDigestRequired="false"
+id="username"/>
+</xwss:SecurityConfiguration>

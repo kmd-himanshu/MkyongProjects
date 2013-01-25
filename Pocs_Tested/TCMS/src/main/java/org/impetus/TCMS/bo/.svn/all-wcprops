@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo
+END
+ClientBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo/ClientBo.java
+END
+UserBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo/UserBo.java
+END
+ProductBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo/ProductBo.java
+END
+TestSuiteBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo/TestSuiteBo.java
+END
+TestCaseBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/bo/TestCaseBo.java
+END

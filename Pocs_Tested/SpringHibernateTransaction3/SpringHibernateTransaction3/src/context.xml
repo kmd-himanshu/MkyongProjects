@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="withdraw" propagation="REQUIRED"  />
+			<tx:method name="deposit" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="factory"/>
+		</property>
+	</bean>
+	          
+	<bean id="accountDAO" class="com.sapient.rampup.spring.exercise.AccountDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="factory"/>
+		</property>
+	</bean>
+    
+    <bean id="transactionDAO" class="com.sapient.rampup.spring.exercise.TransactionsDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="factory"/>
+		</property>
+	</bean>   
+	
+       	<bean id="hibTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		  <constructor-arg>
+			<ref bean="factory"/>
+		  </constructor-arg>
+		</bean>
+       
+       <bean id="factory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="mysqldsn"/>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/sapient/rampup/spring/exercise/Account.hbm.xml</value>
+				<value>com/sapient/rampup/spring/exercise/Customer.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+	</bean>
+       
+       	<bean id="mysqldsn" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost/hibernatetutorial</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value></value>
+		</property>
+		<property name="connectionProperties">
+			<props>
+				<prop key="min">2</prop>
+				<prop key="max">10</prop>
+			</props>
+		</property>
+	</bean>
+       
+</beans>

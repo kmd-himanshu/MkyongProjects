@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.action.excludePattern" value="/services/.*,/WSService/.*" />
+
+	<!-- Add addition packages and configuration here. -->
+	<package name="action" namespace="/action" extends="struts-default,json-default">
+
+		<action name="Login" method="login"
+			class="org.impetus.TCMS.action.UserAction">
+			<result name="input">/action/Login.jsp</result>
+			<result name="success" type="chain">getProducts</result>
+			<!-- <result type="redirectAction">Menu</result> -->
+		</action>
+
+		<action name="getProducts" method="getProducts"
+			class="org.impetus.TCMS.action.ProductAction">
+			<result name="success" type="dispatcher">/action/HomePage.jsp</result>
+			<result name="input">/action/Login.jsp</result>
+		</action>
+
+		<action name="getTestSuiteList" method="getTestSuites"
+			class="org.impetus.TCMS.action.TestSuiteAction">
+			<result name="list" type="json">
+				<param name="excludeProperties">testSuiteBo,parameters</param>
+				<param name="noCache">true</param>
+			</result>
+			<result name="input">/action/Login.jsp</result>
+		</action>
+
+		<action name="getTestCaseList" method="getTestCasesList"
+			class="org.impetus.TCMS.action.TestCaseAction">
+			<result name="list" type="json">
+				<param name="excludeProperties">tcaseBo,parameters</param>
+				<param name="noCache">true</param>
+			</result>
+			<result name="input">/action/Login.jsp</result>
+		</action>
+
+		<action name="getTestCaseHistory" method="getTestCaseHistory"
+			class="org.impetus.TCMS.action.TestCaseAction">
+			<result name="success" type="dispatcher">/action/TestCaseHistory.jsp
+			</result>
+			<result name="input">/action/ErrorPage.jsp</result>
+			<!-- <result type="redirectAction">Menu</result> -->
+		</action>
+
+
+
+
+		<action name="*" class="org.impetus.TCMS.action.TCMSBaseAction">
+			<result>/action/{1}.jsp</result>
+		</action>
+
+	</package>
+</struts>

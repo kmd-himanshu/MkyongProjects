@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TCMSApp/!svn/ver/3/trunk/TCMSApp/src/test/java/org/impetus/TCMS/service
+END
+TCMS_WSServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/test/java/org/impetus/TCMS/service/TCMS_WSServiceTest.java
+END
+TCMS_RS_ServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/TCMSApp/!svn/ver/3/trunk/TCMSApp/src/test/java/org/impetus/TCMS/service/TCMS_RS_ServiceTest.java
+END

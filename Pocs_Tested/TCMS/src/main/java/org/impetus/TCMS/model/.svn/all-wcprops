@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model
+END
+Producttestcases.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Producttestcases.java
+END
+Clientdetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Clientdetails.java
+END
+Userdetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Userdetails.java
+END
+Productdetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Productdetails.java
+END
+Producttestsuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Producttestsuite.java
+END
+Testcasehistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/src/main/java/org/impetus/TCMS/model/Testcasehistory.java
+END

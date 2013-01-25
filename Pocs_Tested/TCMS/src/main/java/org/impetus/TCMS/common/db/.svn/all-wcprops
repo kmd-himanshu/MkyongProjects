@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/common/db
+END
+GenericDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/common/db/GenericDAO.java
+END
+GenericDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/common/db/GenericDAOImpl.java
+END
+IdGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/common/db/IdGenerator.java
+END
+UUIDGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/src/main/java/org/impetus/TCMS/common/db/UUIDGenerator.java
+END

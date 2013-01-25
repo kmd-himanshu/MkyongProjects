@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/.project
+END
+hibernate.reveng.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/hibernate.reveng.xml
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/TCMSApp/!svn/ver/4/trunk/TCMSApp/pom.xml
+END

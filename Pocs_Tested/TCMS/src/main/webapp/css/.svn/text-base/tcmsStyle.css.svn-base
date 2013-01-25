@@ -1,0 +1,123 @@
+.outerDiv {
+	border: solid 1px #000000;
+	width: auto;
+	height: 800px;
+	position: relative;
+}
+
+.headerDiv {
+	width: 95%;
+	height: 80px;
+	position: absolute;
+	color: #2e6e9e;
+	font-family: verdana;
+	font-weight: bold;
+	font-size: 12px;
+	top:10px;
+	left: 10px;
+	text-align: left;
+}
+
+.bodyDiv {
+	width: 95%;
+	height: 85%;
+	position: relative;
+	right: 5px;
+	top: 100px;
+	left: 10px;
+	right: 10px;
+}
+
+.nestedDivTL {
+	border: solid 1px #000000;
+	width: 150px;
+	height: 237px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #dfeffc;
+	color: #2e6e9e;
+	cursor: hand;
+}
+
+.nestedDivTR {
+	width: 1000px;
+	height: 600px;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+.nestedDivBL {
+	border: solid 1px #000000;
+	width: 150px;
+	height: 420px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #2e6e9e;
+}
+
+.nestedDivBR {	
+	width: 150px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.centerDiv{
+	border: solid 1px #000000;
+	width: 300px;
+	position: absolute;
+	top: 50px;
+	right:30px;
+	background-color: #dfeffc;
+}
+
+table.gridlines {
+	border-collapse: collapse;
+}
+
+table.gridlines tr {
+	border-bottom: 1px dotted #000;
+}
+
+.tbl-grid-5 {
+	width: 928px;
+	margin: 5px 0 0 0;
+	border: 1px solid #ccc;
+	margin-left: 30px;
+	background-color: #dfeffc;
+	color: #2e6e9e;
+	font-family: arial;
+	font-size: 15px;
+}
+
+.title {
+	color: #2e6e9e;
+	font-family: arial;
+	font-size: 22px;
+	font-weight: bold;
+	width: 100%;
+	margin: 20px 0 0;
+	text-align: center;
+}
+
+.tbl-login-1 {
+	margin-left:10px;
+	width:290px;
+	background-color: #dfeffc;
+	color: #2e6e9e;
+	font-family: arial;
+	font-size: 15px;
+}
+
+input[type='submit'],input[type='button'] {
+	background-color: #dfeffc;
+	color: #2e6e9e;	
+	text-align: center;
+	font-size: 15px;
+	width: 127px;
+	height: 40px;
+	outline: none;
+}

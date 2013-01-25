@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cache.ehcache.Phone" table="PHONE">
+ 	
+		<meta attribute="class-description">This class contains student's phone number
+			details.</meta>
+			<!--<cache usage="read-write"/> 
+		--><id name="phoneId" type="long" column="PHONE_ID">
+			<generator class="native" />
+		</id>
+  
+		<property name="phoneType" type="string" length="10" column="PHONE_TYPE" />
+		<property name="phoneNumber" type="string" length="15" column="PHONE_NUMBER" />		
+	</class>
+</hibernate-mapping>

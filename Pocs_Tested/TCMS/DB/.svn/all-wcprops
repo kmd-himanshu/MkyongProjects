@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/TCMSApp/!svn/ver/5/trunk/TCMSApp/DB
+END
+tcmsappDB_back.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TCMSApp/!svn/ver/5/trunk/TCMSApp/DB/tcmsappDB_back.sql
+END
+insertdata.sql
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/TCMSApp/!svn/ver/2/trunk/TCMSApp/DB/insertdata.sql
+END

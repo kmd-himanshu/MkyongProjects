@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cache.ehcache.Student" table="STUDENT">
+ <!--       -->
+        <meta attribute="class-description">This class contains student details.</meta><!--
+       <cache usage="read-only"/>
+        --><id name="studentId" type="long" column="STUDENT_ID">
+            <generator class="native" />
+        </id>
+        <property name="studentName" type="string" not-null="true" length="100" column="STUDENT_NAME" />
+        <property name="date" type="date" column="Date" />
+        <!--<set name="studentPhoneNumbers" cascade="all" >
+        <key column="STUDENT_ID"/>
+        <one-to-many  class="com.cache.ehcache.Phone" />
+        
+      </set>
+      --><set name="studentPhoneNumbers" table="STUDENT_PHONE" cascade="all">
+			<key column="STUDENT_ID" />
+			<many-to-many column="PHONE_ID" unique="true" class="com.cache.ehcache.Phone" />
+		</set>
+   	
+    </class>
+</hibernate-mapping>

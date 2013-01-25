@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="mypackage.Student" table="STUDENTquery">
+      
+        <meta attribute="class-description">This class contains student details.</meta><!--
+     	<cache usage="read-only"/>
+        --><id name="studentId" type="long" column="STUDENT_ID">
+            <generator class="native" />
+        </id>
+   <!--      <property name="phoneId" type="long" column="PHONE_ID" />  --> 
+        <property name="studentName" type="string" not-null="true" length="100" column="STUDENT_NAME" />
+        <property name="date" type="date" column="Date" />
+   <!--   
+   This will create a seperate table STUDENT_PHONE in which STUDENT_ID and PHONE_ID
+   are mapped   -->
+        <!--<set name="studentPhoneNumbers" table="STUDENT_PHONE" cascade="all">
+			<key column="STUDENT_ID" />
+			<many-to-many column="PHONE_ID" unique="true" class="mypackage.Phone" />
+		</set>
+		 
+		
+		 --><set name="studentPhoneNumbers"  cascade="all">
+			<key column="STUDENT_ID" />
+			<one-to-many  class="mypackage.Phone" />
+		</set>
+    </class>
+</hibernate-mapping>

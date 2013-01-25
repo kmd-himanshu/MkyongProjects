@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	
+	<class name="com.sapient.rampup.spring.exercise.Customer" table="customer">
+		<id name="custId" column="custId">
+			<generator class="increment" />
+		</id>
+		<set name="accounts" cascade="all">
+        	<key column="custId" />
+        	<one-to-many class="com.sapient.rampup.spring.exercise.Account" />
+        </set>	
+	</class>
+
+</hibernate-mapping>

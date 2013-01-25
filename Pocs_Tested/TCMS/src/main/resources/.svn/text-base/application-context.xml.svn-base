@@ -1,0 +1,206 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:sec="http://www.springframework.org/schema/security" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.1.xsd
+http://jax-ws.dev.java.net/spring/core
+http://jax-ws.dev.java.net/spring/core.xsd
+http://jax-ws.dev.java.net/spring/servlet
+http://jax-ws.dev.java.net/spring/servlet.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.1.xsd
+http://cxf.apache.org/core
+http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/jaxws
+http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+
+	<bean id="TCMSWSServiceImpl" class="org.impetus.TCMS.service.impl.TCMS_WS_ServiceImpl" />
+	<cxf:bus>
+	<!-- These properties can also be overridden by specifying jaxws:properties -->
+		<cxf:properties>
+			<entry key="ws-security.validate.token" value="false" />
+			<entry key="ws-security.ut.no-callbacks" value="true" />
+			<entry key="ws-security.ut.validator"
+				value="org.impetus.TCMS.common.security.TCMS_UsernameTokenValidator" />
+		</cxf:properties>
+	</cxf:bus>
+
+	<jaxws:endpoint id="TCMS_WS_Service" implementor="#TCMSWSServiceImpl"
+		address="/getTestCaseHistory">
+		<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.binding.soap.saaj.SAAJInInterceptor" />
+			<bean class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="UsernameToken" />
+						<entry key="passwordType" value="PasswordText" />
+						<!-- to set password for client <entry key="passwordCallbackRef"> <ref 
+							bean="passwordCallbackHandler" /> </entry> -->
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:inInterceptors>
+	</jaxws:endpoint>
+
+	<bean id="passwordCallbackHandler"
+		class="org.impetus.TCMS.common.security.PasswordCallbackHandler">
+	</bean>
+
+	<!-- For Restful service Component -->
+	<context:component-scan base-package="org.impetus.TCMS.service" />
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="org.impetus.TCMS.common.security" />
+
+	<!-- For Soap WS binding <wss:binding url="/services/ws/getTestCaseHistory"> 
+		<wss:service> <ws:service bean="#TCMSWSService"/> </wss:service> </wss:binding> -->
+
+	<sec:http entry-point-ref="wsAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/services/**" access="ROLE_USER" />
+		<sec:custom-filter ref="wsFilter" position="BASIC_AUTH_FILTER" />
+		<sec:logout />
+	</sec:http>
+	<bean id="wsFilter"
+		class="org.impetus.TCMS.common.security.TCMSBaseAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="authenticationEntryPoint" ref="basicAuthenticationEntryPoint" />
+	</bean>
+	<bean id="basicAuthenticationEntryPoint"
+		class="org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint">
+		<property name="realmName" value="WS realm" />
+	</bean>
+
+
+	<!-- <bean id="wsSuccessHandler" class="org.impetus.TCMS.common.security.TCMSRequestAwareAuthenticationSuccessHandler" 
+		/> -->
+
+	<sec:authentication-manager alias="authenticationManager">
+		<sec:authentication-provider>
+			<sec:user-service>
+				<sec:user name="temporary" password="temporary"
+					authorities="ROLE_ADMIN" />
+				<sec:user name="appUser" password="app123" authorities="ROLE_USER" />
+			</sec:user-service>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+
+	<!-- <sws:interceptors> <ref bean="wsSecurityInterceptor"/> </sws:interceptors> -->
+	<!-- <bean id="wsSecurityInterceptor" class="org.springframework.ws.soap.security.xwss.XwsSecurityInterceptor"> 
+		<property name="policyConfiguration" value="WEB-INF/classes/TCMS_security_config.xml"/> 
+		<property name="callbackHandlers"> <list><ref bean="passwordValidationHandler"/></list> 
+		</property> </bean> <bean id="passwordValidationHandler" class="org.springframework.ws.soap.security.xwss.callback.SimplePasswordValidationCallbackHandler"> 
+		<property name="users"> <props> <prop key="testusr1">1234</prop> </props> 
+		</property> </bean> -->
+
+	<!-- Database Configuration -->
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>WEB-INF/classes/database.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>org.impetus.TCMS.model.Userdetails</value>
+				<value>org.impetus.TCMS.model.Clientdetails</value>
+				<value>org.impetus.TCMS.model.Productdetails</value>
+				<value>org.impetus.TCMS.model.Producttestcases</value>
+				<value>org.impetus.TCMS.model.Producttestsuite</value>
+				<value>org.impetus.TCMS.model.Testcasehistory</value>
+				<value>org.impetus.TCMS.model.Userrole</value>				
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Database Configuration -->
+
+	<!-- Action Configuration -->
+
+	<bean id="userAction" class="org.impetus.TCMS.action.UserAction">
+		<property name="userBo" ref="userBo" />
+	</bean>
+
+	<bean id="userBo" class="org.impetus.TCMS.bo.impl.UserBoImpl">
+		<property name="userDAO" ref="userDAO" />
+	</bean>
+
+	<bean id="userDAO" class="org.impetus.TCMS.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="productAction" class="org.impetus.TCMS.action.ProductAction">
+		<property name="productBo" ref="productBo" />
+	</bean>
+
+	<bean id="productBo" class="org.impetus.TCMS.bo.impl.ProductBoImpl">
+		<property name="productDAO" ref="productDAO" />
+	</bean>
+
+	<bean id="productDAO" class="org.impetus.TCMS.dao.impl.ProductDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="clientbo" class="org.impetus.TCMS.bo.impl.ClientBoImpl">
+		<property name="clientDAO" ref="clientDAO" />
+	</bean>
+
+	<bean id="clientDAO" class="org.impetus.TCMS.dao.impl.ClientDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="testCaseBo" class="org.impetus.TCMS.bo.impl.TestCaseBoImpl">
+		<property name="testcaseDAO" ref="testcaseDAO" />
+	</bean>
+
+	<bean id="testcaseDAO" class="org.impetus.TCMS.dao.impl.TestCaseDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="testSuiteBo" class="org.impetus.TCMS.bo.impl.TestSuiteBoImpl">
+		<property name="testSuiteDAO" ref="testSuiteDAO" />
+	</bean>
+
+	<bean id="testSuiteDAO" class="org.impetus.TCMS.dao.impl.TestSuiteDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="TCMSWSService" class="org.impetus.TCMS.service.impl.TCMS_WS_ServiceImpl">
+		<property name="testCaseBo" ref="testCaseBo" />
+	</bean>
+
+	<!-- Action Configuration -->
+</beans>
